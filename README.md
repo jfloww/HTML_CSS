@@ -1,4 +1,4 @@
-# HTML_Effect
+# HTML_CSS
 
 https://codepen.io/
 
