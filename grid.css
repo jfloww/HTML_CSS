@@ -1,0 +1,42 @@
+/*
+1. CSS Layout
+- flex: 한줄로 만들기/ 새로로 만들기 (wrap으로 표처럼 만들수있음)
+- grid: 표만들기 
+
+2. CSS grid
+- grid: display: grid
+      : grid-template-columns
+      : grid-template-rows
+      : grid-template-areas
+      : grid-gap; grid-column-gap, grid-row-gap
+- grid cell
+      : grid-column-start
+      : grid-column-end
+      : grid-row-start
+      : grid-row-end
+      : grid-area
+*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    /* grid-template-rows: repeat(10, 200px); */
+    grid-auto-rows: 200px;
+    /* grid-auto-rows: minmax(200px, auto); */
+    /* Make space to prevent text cutting */
+    grid-gap: 10px; 
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+    /* make space between cells */
+}
+
+.item2 {
+    /* grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    grid-column: 2 / -1;
+    grid-row: 1 / span 2;
+}
